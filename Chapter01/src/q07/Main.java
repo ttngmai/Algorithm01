@@ -1,6 +1,7 @@
 package q07;
 
 import java.util.Scanner;
+
 // 30p Q7
 
 public class Main {
@@ -15,13 +16,12 @@ public class Main {
 
 		for (int i = 1; i <= n; i++) {
 			sum += i;
-			if (i == n) {
+			if (i == n)
 				System.out.print(i + " = " + sum);
-			} else {
+			else
 				System.out.print(i + " + ");
-			}
 		}
 
 		sc.close();
-	} // end main()
-} // end Main
+	}
+}

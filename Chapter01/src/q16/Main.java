@@ -1,10 +1,10 @@
 package q16;
 
 import java.util.Scanner;
+
 // 40p Q16
 
 public class Main {
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n;
@@ -33,5 +33,5 @@ public class Main {
 
 			System.out.println();
 		}
-	} // end spira()
-} // end Main
+	}
+}

@@ -1,6 +1,7 @@
 package q11;
 
 import java.util.Scanner;
+
 // 33p Q11
 
 public class Main {
@@ -27,5 +28,5 @@ public class Main {
 		System.out.println("그 수는 " + cnt + "자리입니다.");
 
 		sc.close();
-	} // end main()
-} // end Main
+	}
+}

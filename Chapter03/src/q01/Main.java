@@ -1,6 +1,7 @@
 package q01;
 
 import java.util.Scanner;
+
 // 115p Q1
 
 public class Main {

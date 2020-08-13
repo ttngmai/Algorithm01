@@ -1,5 +1,7 @@
 package q03;
 
+// 144p Q3
+
 public class Main {
 	private int max; // 스택의 용량 (A・B의 합계)
 	private int ptrA; // 스택 포인터 A

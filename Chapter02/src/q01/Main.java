@@ -2,6 +2,7 @@ package q01;
 
 import java.util.Random;
 import java.util.Scanner;
+
 // 56p Q1
 
 public class Main {
@@ -34,5 +35,5 @@ public class Main {
 				max = a[i];
 
 		return max;
-	} // end maxOf()
-} // end Main
+	}
+}

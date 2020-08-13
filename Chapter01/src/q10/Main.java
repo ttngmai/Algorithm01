@@ -1,6 +1,7 @@
 package q10;
 
 import java.util.Scanner;
+
 // 33p Q10
 
 public class Main {
@@ -22,5 +23,5 @@ public class Main {
 		System.out.println("a - b는 " + (b - a) + "입니다.");
 
 		sc.close();
-	} // end main()
-} // end Main
+	}
+}

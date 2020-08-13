@@ -1,6 +1,7 @@
 package q09;
 
 import java.util.Scanner;
+
 // 30p Q9
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
 		System.out.println(sumof(a, b));
 
 		sc.close();
-	} // end main()
+	}
 
 	static int sumof(int a, int b) {
 		int sum = 0;
@@ -27,10 +28,9 @@ public class Main {
 			b = tmp;
 		}
 
-		for (int i = a; i <= b; i++) {
+		for (int i = a; i <= b; i++)
 			sum += i;
-		}
 
 		return sum;
-	} // end sumof()
-} // end Main
+	}
+}

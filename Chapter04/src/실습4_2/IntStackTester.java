@@ -3,6 +3,7 @@ package 실습4_2;
 import java.util.Scanner;
 
 import 실습4_1.IntStack;
+
 // 142p 실습 4-2
 // int형 스택의 사용 예
 

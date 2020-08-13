@@ -1,6 +1,7 @@
 package q17;
 
 import java.util.Scanner;
+
 // 40p Q17
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
 		npira(n);
 
 		sc.close();
-	} // end main()
+	}
 
 	static void npira(int n) {
 		for (int i = 1; i <= n; i++) {
@@ -26,11 +27,10 @@ public class Main {
 			for (int a = 0; a < (i * 2 - 1); a++)
 				System.out.print(i % 10);
 
-			for (int e = 0; e < n - i; e++) {
+			for (int e = 0; e < n - i; e++)
 				System.out.print(" ");
-			}
 
 			System.out.println();
 		}
-	} // end npira()
-} // end Main
+	}
+}

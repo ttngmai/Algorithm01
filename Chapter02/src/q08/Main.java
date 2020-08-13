@@ -1,6 +1,7 @@
 package q08;
 
 import java.util.Scanner;
+
 // 83p Q8
 
 public class Main {

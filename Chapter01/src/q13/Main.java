@@ -4,7 +4,6 @@ package q13;
 
 public class Main {
 	public static void main(String[] args) {
-		
 		for(int i = 0; i < 10; i++) {
 			if(i == 0)
 				System.out.printf("%3s", "|");
@@ -18,12 +17,10 @@ public class Main {
 			for(int j = 0; j < 10; j++) {
 				if(j == 0)
 					System.out.printf("%3s", i + "|");
-				else {
+				else
 					System.out.printf("%3d", i + j);
-				}
 			}
 			System.out.println();
 		}
-		
-	} // end main()
-} // end Main
+	}
+}

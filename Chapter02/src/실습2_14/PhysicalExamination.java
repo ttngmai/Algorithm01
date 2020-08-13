@@ -1,11 +1,11 @@
 package 실습2_14;
 
 import java.util.Scanner;
+
 // 91p 실습 2-14
 // 신체검사 데이터용 클래스 배열에서 평균 키와 시력의 분포를 구함
 
 class PhysicalExamination {
-
 	static final int VMAX = 21;		// 시력 분포(0.0에서 0.1 단위로 21개）
 
 	static class PhyscData {

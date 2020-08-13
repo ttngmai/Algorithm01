@@ -2,6 +2,7 @@ package 실습3_5;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
 // 120p 실습 3-5
 // Arrays.binarySearch로 이진 검색
 

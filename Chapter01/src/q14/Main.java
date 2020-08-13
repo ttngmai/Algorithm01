@@ -1,6 +1,7 @@
 package q14;
 
 import java.util.Scanner;
+
 // 38p Q14
 
 public class Main {
@@ -16,7 +17,6 @@ public class Main {
 				System.out.print("*");
 			System.out.println();
 		}
-
 		sc.close();
-	} // end main()
-} // end Main
+	}
+}

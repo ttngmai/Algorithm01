@@ -1,6 +1,7 @@
 package 실습3_4;
 
 import java.util.Scanner;
+
 // 111p 실습 3-4
 // 이진 검색 
 

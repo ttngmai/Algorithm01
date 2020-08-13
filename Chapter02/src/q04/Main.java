@@ -1,6 +1,7 @@
 package q04;
 
 import java.util.Random;
+
 // 64p Q4
 
 public class Main {

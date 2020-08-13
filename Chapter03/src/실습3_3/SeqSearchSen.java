@@ -1,6 +1,7 @@
 package 실습3_3;
 
 import java.util.Scanner;
+
 // 105p 실습 3-3
 // 선형 검색(보초법)
 

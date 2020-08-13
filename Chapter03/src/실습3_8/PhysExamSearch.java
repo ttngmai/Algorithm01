@@ -3,6 +3,7 @@ package 실습3_8;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
+
 // 128p 실습 3-8
 // 신체검사 데이터 배열에서 이진 검색하기
 

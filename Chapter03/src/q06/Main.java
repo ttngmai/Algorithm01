@@ -2,6 +2,7 @@ package q06;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
 // 121p Q6
 
 public class Main {

@@ -1,6 +1,7 @@
 package 실습2_13;
 
 import java.util.Scanner;
+
 // 82p 실습 2-13
 // 그 해 경과 일수를 구함
 
