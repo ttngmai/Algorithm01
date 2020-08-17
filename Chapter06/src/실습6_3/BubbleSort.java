@@ -1,10 +1,11 @@
-package q02;
+package 실습6_3;
 
 import java.util.Scanner;
 
-// 204p Q2
+// 207p 실습 6-3
+// 버블 정렬(버전 3)
 
-public class Main {
+public class BubbleSort {
 	// a[idx1]와 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
@@ -14,35 +15,22 @@ public class Main {
 	
 	// 버블 정렬
 	static void bubbleSort(int[] a, int n) {
-		int compareCnt = 0;
-		int swapCnt = 0;
-		
-		for (int i = 0; i < n - 1; i++) {
-			System.out.println("패스" + (i + 1) + ":");
-			for (int j = n - 1; j > i; j--) {
-				for (int k = 0; k < n - 1; k++)
-					System.out.printf("%3d %c", a[k], (k != j - 1) ? ' ' : (a[j - 1] > a[j]) ? '+' : '-');
-				System.out.printf("%3d\n", a[n - 1]);
-				
-				compareCnt++;
-				if(a[j - 1] > a[j]) {
+		int k = 0;
+		while (k < n - 1) {
+			int last = n - 1;
+			for (int j = n - 1; j > k; j--)
+				if (a[j - 1] > a[j]) {
 					swap(a, j - 1, j);
-					swapCnt++;
+					last = j;
 				}
-			}
-			
-			for (int k = 0; k < n; k++)
-				System.out.printf("%3d  ", a[k]);
-			System.out.println();
+			k = last;
 		}
-		System.out.println("비교를 " + compareCnt + "회 했습니다.");
-		System.out.println("교환을 " + swapCnt + "회 했습니다.");
 	}
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("버블 정렬(버전1)");
+		System.out.println("버블 정렬(버전3)");
 		System.out.print("요솟수: ");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];
@@ -59,3 +47,4 @@ public class Main {
 			System.out.println("x[" + i + "] = " + x[i]);
 	}
 }
+
