@@ -1,11 +1,8 @@
-package 실습06C_01;
+package q13;
 
 import java.util.Scanner;
 
-// 229p 실습 6-9
-// 퀵 정렬
-
-public class QuickSort1 {
+public class Main {
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
@@ -13,21 +10,36 @@ public class QuickSort1 {
 		a[idx2] = t;
 	}
 	
+	// 단순 삽입 정렬
+	static void insertionSort(int[] a, int left, int right) {
+		for (int i = left + 1; i <= right; i++) {
+			int j;
+			int tmp = a[i];
+			for (j = i; j > left && a[j - 1] > tmp; j--)
+				a[j] = a[j - 1];
+			a[j] = tmp;
+		}
+	}
+	
 	// 퀵 정렬
 	static void quickSort(int[] a, int left, int right) {
-		int pl = left; 				// 왼쪽 커서
-		int pr = right; 			// 오른쪽 커서
-		int x = a[(pl + pr) / 2];	// 피벗
-		
-		do {
-			while (a[pl] < x) pl++;
-			while (a[pr] > x) pr--;
-			if (pl <= pr)
-				swap(a, pl++, pr--);
-		} while (pl <= pr);
-		
-		if (left < pr) quickSort(a, left, pr);
-		if (pl < right) quickSort(a, pl, right);
+		if (right - left < 9)
+			insertionSort(a, left, right);
+		else {
+			int pl = left; 				// 왼쪽 커서
+			int pr = right; 			// 오른쪽 커서
+			int x = a[(pl + pr) / 2];	// 피벗
+			
+			do {
+				while (a[pl] < x) pl++;
+				while (a[pr] > x) pr--;
+				if (pl <= pr)
+					swap(a, pl++, pr--);
+			} while (pl <= pr);
+			
+			if (left < pr) quickSort(a, left, pr);
+			if (pl < right) quickSort(a, pl, right);
+		}
 	}
 	
 	public static void main(String[] args) {

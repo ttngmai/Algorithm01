@@ -1,4 +1,4 @@
-package 실습06_09;
+package 실습06C_01;
 
 import java.util.Scanner;
 
