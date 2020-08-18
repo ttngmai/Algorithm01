@@ -2,6 +2,8 @@ package q05;
 
 import java.util.Scanner;
 
+// 208p Q5
+
 public class Main {
 	// 배열의 요소 a[idx1]과 a[idx2]를 교환
 	static void swap(int[] a, int idx1, int idx2) {
