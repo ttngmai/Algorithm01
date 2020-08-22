@@ -16,11 +16,6 @@ public class Main {
 		int pr = right; 			// 오른쪽 커서
 		int x = a[(pl + pr) / 2];	// 피벗
 		
-		System.out.printf("a[%d]~a[%d] : {", left, right);
-		for (int i = left; i < right; i++)
-			System.out.printf("%d, ", a[i]);
-		System.out.printf("%d}\n", a[right]);
-		
 		do {
 			while (a[pl] < x) pl++;
 			while (a[pr] > x) pr--;

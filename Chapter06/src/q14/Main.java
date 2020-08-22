@@ -1,8 +1,25 @@
-package q13;
+package q14;
 
 import java.util.Scanner;
 
 public class Main {
+	// a, b, c의 중앙값을 구하여 반환
+	static int med3(int a, int b, int c) {
+		if (a >= b)
+			if (b >= c)
+				return b;
+			else if (a <= c)
+				return a;
+			else
+				return c;
+		else if (a > c)
+			return a;
+		else if (b > c)
+			return c;
+		else
+			return b;
+	}
+	
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
@@ -26,9 +43,9 @@ public class Main {
 		if (right - left < 9)
 			insertionSort(a, left, right);
 		else {
-			int pl = left; 				// 왼쪽 커서
-			int pr = right; 			// 오른쪽 커서
-			int x = a[(pl + pr) / 2];	// 피벗
+			int pl = left; 									// 왼쪽 커서
+			int pr = right; 								// 오른쪽 커서
+			int x = med3(a[pl], a[(pl + pr) / 2], a[pr]);	// 피벗
 			
 			do {
 				while (a[pl] < x) pl++;

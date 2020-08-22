@@ -1,10 +1,27 @@
-package q13;
+package q14;
 
 import java.util.Scanner;
 
 import 실습06_10.IntStack;
 
 public class Main2 {
+	// a, b, c의 중앙값을 구하여 반환
+	static int med3(int a, int b, int c) {
+		if (a >= b)
+			if (b >= c)
+				return b;
+			else if (a <= c)
+				return a;
+			else
+				return c;
+		else if (a > c)
+			return a;
+		else if (b > c)
+			return c;
+		else
+			return b;
+	}
+	
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
@@ -32,13 +49,13 @@ public class Main2 {
 		rstack.push(right);
 
 		while (lstack.isEmpty() != true) {
-			int pl = left  = lstack.pop();			// 왼쪽 커서
-			int pr = right = rstack.pop();			// 오른쪽 커서
+			int pl = left  = lstack.pop();						// 왼쪽 커서
+			int pr = right = rstack.pop();						// 오른쪽 커서
 			
 			if (right - left < 9)
 				insertionSort(a, left, right);
 			else {
-				int x = a[(left + right) / 2];		// 피벗
+				int x = med3(a[pl], a[(pl + pr) / 2], a[pr]);	// 피벗
 
 				do {
 					while (a[pl] < x) pl++;

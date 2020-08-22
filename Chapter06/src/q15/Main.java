@@ -1,4 +1,4 @@
-package q13;
+package q15;
 
 import java.util.Scanner;
 
@@ -8,6 +8,17 @@ public class Main {
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
+	}
+	
+	// x[a], x[b], x[c]를 sort (중앙값의 index를 반환)
+	static int sort3Elem(int[] x, int a, int b, int c) {
+		if (x[b] < x[a])
+			swap(x, b, a);
+		if (x[c] < x[b])
+			swap(x, c, b);
+		if (x[b] < x[a])
+			swap(x, b, a);
+		return b;
 	}
 	
 	// 단순 삽입 정렬
@@ -26,9 +37,14 @@ public class Main {
 		if (right - left < 9)
 			insertionSort(a, left, right);
 		else {
-			int pl = left; 				// 왼쪽 커서
-			int pr = right; 			// 오른쪽 커서
-			int x = a[(pl + pr) / 2];	// 피벗
+			int pl = left; 	// 왼쪽 커서
+			int pr = right;	// 오른쪽 커서
+			int x;			// 피벗
+			int m = sort3Elem(a, pl, (pl + pr) / 2, pr);
+			x = a[m];
+			swap(a, m, right - 1);
+			pl++;
+			pr--;
 			
 			do {
 				while (a[pl] < x) pl++;
